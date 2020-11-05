@@ -1,0 +1,397 @@
+html {
+  background: url("Assets/background_img.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+:root {
+  --blue-color: #126dff;
+  --red-color: #ff2121;
+}
+
+body {
+  margin: 0;
+  /*By setting the margin of the body to 0 elements with the width of the whole page can reach the sides, without this there would be a gap.*/
+    font-family: 'Do Hyeon', sans-serif, Impact, Charcoal, sans-serif;
+}
+
+.dropdown-show{
+display: block; 
+}
+
+.x{ 
+color: black !important;
+}
+
+.big-screen{
+  display: inline;
+}
+
+#shrink-push{
+  display: none;
+}
+
+#hamburger-menu{
+  color: white;
+   font-size: 30px;
+  position: fixed;
+  opacity: 0.90;
+ top: 10px;
+  left: 10px;
+  display: none;
+ z-index: 999;
+  cursor: pointer;
+}
+
+#dropdown-menu{
+  position: fixed;
+  background-color: white;
+  margin: 0;
+  opacity: 0.90;
+  margin-top: -21px;
+    color: black;
+  width: 100%;
+z-index: 800;
+}
+
+ul{
+   list-style-type: none;
+  margin: 0;
+  display: inline;
+     opacity: 1;
+}
+
+li{
+  padding: 3px 40px;
+  letter-spacing: 0.5px;
+  display: none;
+  cursor: pointer;
+}
+
+li:first-child {
+margin-top: 45px;
+  padding: 0px 40px 0px;
+}
+  
+li:nth-child(n+2) {
+  border-top: 1px solid black;
+  -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box; 
+}
+
+li:hover{
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  background-color: transparent;
+  font-weight: normal;
+  line-height: 1.1;
+  padding: 20px 0;
+  text-transform: uppercase;
+  margin: 0;
+  /*this is removing the top and bottom margin only, side margins are removed by the 0 margin in the body styling up above.*/
+  transition: background-color 0.5s;
+  -webkit-transition: background-color 0.5s;
+  -moz-transition: background-color 0.5s;
+}
+
+#colorDisplay {
+  font-size: 200%;
+}
+
+#stripe {
+  background-color: white;
+  text-align: center;
+  height: 25px;
+}
+
+#message {
+  display: inline-block; /*inline block allows for the message to sit next to the other elements, appearing and dissaperaing without altering their position*/
+  width: 25%;
+  position: relative;
+font-size: 90%;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: 1px;
+  font-size: 90%;
+  transition: all 0.5s;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+}
+
+button:hover {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+/*If the container of the squares is 100% then each square is 30% of that space making up 90% and the margin of 1.66% on each side takes up the remainder of the space.*/
+.squares {
+  width: 30%;
+  background-color: transparent;
+  padding-bottom: 30%;
+  float: left;
+  margin: 1.66%;
+  border-radius: 15%;
+  cursor: pointer;
+  transition: opacity 0.5s; /*this is what causes the squares to fade in and out*/
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+}
+
+.middleThree{
+  margin-bottom: 25%;
+}
+
+.bottomThree {
+  display: none;
+  margin-bottom: 25%;
+}
+
+.square-container {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.selected {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: none;
+  margin: 0;
+}
+
+.o-text {
+  margin: 10% auto 0 auto;
+  max-width: 72%;
+  z-index: 1000;
+  padding: 5px 0px 0px;
+  background: #fff;
+  text-align: center;
+  font-size: 1em;
+  border-radius: 15px;
+  opacity: 0.8;
+}
+
+ .o-text p {
+  margin-left: 20px;
+    margin-right: 20px;
+}
+
+.close {
+  background-color: var(--red-color);
+  cursor: pointer;
+  width: 100.1%;
+  height: 35px;
+  margin: 0 auto;
+border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  text-align: center;
+  /*The line height is the same as the height of a actual button itself, this perfectly centres the text vertically inside the container, this will only work if there is one line of text.*/
+line-height: 35px; 
+  color: white;
+}
+
+#gameover-container{
+  margin-top: 15%;
+}
+
+.gameOver{
+font-size: 6vh;
+  line-height: 10%;
+}
+
+.noGuesses{
+font-size: 4vh;
+  line-height: 10%;
+}
+
+#footer{
+  background-color: white;
+ height: 52px;
+margin-top: -50px;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   opacity: 0;
+transition: opacity 1s; 
+    -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+}
+
+#lgmDeactivation{
+   visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+   -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+}
+
+#lgmDeactivation:hover {
+  background-color: var(--red-color);
+  color: white;
+}
+
+.LGMselected {
+  background-color: var(--blue-color);
+  color: white;
+}
+
+#life-container {
+margin: 0 auto;
+  height: 52px;
+ width: 60%;
+   text-align: center;
+}
+
+.life {
+  background-color: #00bfff;
+ width: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 50%;
+   display: inline-block;
+  margin: 3px 1%;
+  border: 7px solid #0093c4;  
+}
+
+#footer.show{
+  opacity: 0.85;
+}
+
+.easy {
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  opacity: 0;
+  transition: opacity 1s;
+   -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+}
+
+.easy.showEasy{
+  opacity: 1;
+}
+
+.normal{
+  opacity: 0;
+  transition: opacity 1s;
+   -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+}
+
+.normal.showNorm{
+  opacity: 1;
+}
+
+#hard-container{
+  width: 20%;
+}
+
+.hard{
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+   -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+}
+
+#hardOne {
+left: 560px;
+}
+
+#hardTwo {
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+#hardThree {
+  right: 560px;
+}
+
+.hard.showHard{
+  opacity: 1;
+}
+
+.lifelost {
+background-color: gainsboro;
+ border: 7px solid silver; 
+   transition: background-color 0.5s, border 0.5s;
+}
+
+@media only screen and (min-width: 1000px) {
+  #dropdown-menu{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+#hamburger-menu{
+  display: block;
+}  
+  #gameover-container{
+  margin-top: 25%;
+}
+  .overlay .o-text{
+    max-width: 90%;
+    font-size: 15px;
+  }
+  .big-screen{
+  display: none;
+}
+  #shrink-push{
+  display: block;
+}  
+ #lgm-smaller{
+  background-color: white;
+  text-align: center;
+  height: 25px;
+position: absolute;
+   border-top: 1px solid lightgray;
+left:0;
+right:0;
+} 
+  #message {
+  width: 50%;
+} 
+  .square-container {
+  margin-top: 40px;
+}
+  #hardOne{
+left: 80px;
+}
+#hardThree {
+  right: 80px;
+}
+}

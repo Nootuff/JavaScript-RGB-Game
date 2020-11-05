@@ -1,0 +1,81 @@
+<html>
+<head>
+  <title>Colour Game</title>
+   <script src="https://kit.fontawesome.com/0db405f613.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+  
+  <link href="https://fonts.googleapis.com/css?family=Medula+One|Rubik+Mono+One" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+  <span id="hamburger-menu" class="fas fa-bars"><div></div></span>
+  <div id="dropdown-menu"><ul >
+    <li class="instruct">INSTRUCTIONS </li>
+    <li class="easyBtn">EASY</li>
+    <li class="normalBtn">NORMAL</li>
+    <li class="hardBtn">HARD</li>
+    </ul></div>
+  <h1>Adam's<br> <span id="colorDisplay"> RGB</span><br> Colour Game</h1>
+  <div id="stripe">
+    <span class="big-screen"><button class="instruct">Instructions</button></span>
+    <button id="reset">Reset</button>
+    <span id="message"></span>
+    <br id="shrink-push">
+    <span class="big-screen"><span class="easyBtn"><button id="easyBtnActual">Easy</button></span>
+    <span class="normalBtn"><button id="normalBtnActual" class="selected">Normal</button></span>
+    <span  class="hardBtn"><button id="hardBtnActual">Hard</button></span>
+      </span>
+    <span id="lgm-smaller">
+    <button id="lgmButton">Limited Guess Mode</button>
+    <button id="lgmDeactivation">X</button>
+      </span>
+  </div>
+  <div class="square-container ">
+    <div class="squares"></div>
+    <div class="squares"></div>
+    <div class="squares "></div>
+    <div class="squares middleThree"></div>
+    <div class="squares middleThree"></div>
+    <div class="squares middleThree"></div>
+    <div class="squares bottomThree"></div>
+    <div class="squares bottomThree"></div>
+    <div class="squares bottomThree"></div>
+  </div>
+  <div class="overlay"><div class="o-text">
+    <p>The RGB colour model is a method to visualize colour in which different amounts of <span style="color:red; font-weight: bold">red</span>, <span style="color:green; font-weight: bold">green</span>, and <span style="color:blue; font-weight: bold ">blue</span> light are added together to reproduce a broad array of colours. <br><br>
+See if you can identify & pick the colour displayed in the header from the squares by looking at its RGB values & the different levels of red green and blue they correspond to. <br><br>
+To make the game more challenging, <span style="font-weight: bold">Limited Guess Mode</span> will only give you a few chances, once you run out of guesses, the game is over. 
+To reset the game, press RESET or any of the difficulty selectors.
+</p>
+    <br>
+    <div class="close">CLOSE X</div>
+  </div>
+  </div>
+  <div class="overlay">
+  <div id="gameover-container" class="o-text"><p class="gameOver" style="font-family: 'Rubik Mono One', sans-serif;">GAME OVER!</p><p class="noGuesses">Out of guesses</p>
+    <br>
+    <div class="close">RETRY</div>
+    </div>
+  </div>
+  <div id = "footer">
+  <div id="life-container">
+    <div class="life easy"></div>
+<div class="life normal" id="normOne"></div>
+    <div class="life normal" id="normTwo"></div>
+    <span id="hard-container">
+    <div class="life hard" id="hardOne"></div>
+  <div class="life hard" id="hardTwo"></div>
+  <div class="life hard" id="hardThree"></div>
+      </span>
+  </div>
+    </div>
+<script src="funcs.js">
+</script>
+
+</body>
+
+</html>
+
